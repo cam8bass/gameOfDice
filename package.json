@@ -1,0 +1,17 @@
+{
+  "name": "gameofdice",
+  "version": "1.0.0",
+  "description": "Réalisation d'un jeu de dés",
+  "main": "index.js",
+  "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cam8bass/gameOfDice.git"
+  },
+  "author": "camille laignel",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/cam8bass/gameOfDice/issues"
+  },
+  "homepage": "https://github.com/cam8bass/gameOfDice#readme"
+}
