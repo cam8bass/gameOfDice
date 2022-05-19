@@ -12,7 +12,337 @@ html {
   font-size: 62.5%;
 }
 
+@media only screen and (max-width: 1150px) {
+  html {
+    font-size: 56.25%;
+  }
+}
+
+@media only screen and (max-width: 1000px) {
+  html {
+    font-size: 50%;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  html {
+    font-size: 43.75%;
+  }
+}
+
+@media only screen and (max-width: 450px) {
+  html {
+    font-size: 37.75%;
+  }
+}
+
 body {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  font-family: "Lato", sans-serif;
+}
+
+@-webkit-keyframes rotate {
+  0% {
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes rotate {
+  0% {
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+.rotation {
+  -webkit-animation: rotate 1s linear;
+          animation: rotate 1s linear;
+}
+
+.opacity {
+  opacity: 0;
+}
+
+.hidden {
+  display: none;
+}
+
+.container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  height: 100vh;
+  background-image: -webkit-gradient(linear, left top, right bottom, from(rgba(178, 158, 138, 0.5)), to(rgba(139, 86, 60, 0.8)));
+  background-image: linear-gradient(to right bottom, rgba(178, 158, 138, 0.5), rgba(139, 86, 60, 0.8));
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
+}
+
+.game {
+  position: relative;
+  width: 95vw;
+  height: 90rem;
+  background-color: #f7f7f7;
+  -webkit-box-shadow: 5px 5px 14px 0px rgba(0, 0, 0, 0.15);
+  box-shadow: 5px 5px 14px 0px rgba(0, 0, 0, 0.15);
+}
+
+@media only screen and (max-width: 500px) {
+  .game {
+    height: 70rem;
+  }
+}
+
+.game__btnNewGame {
+  position: absolute;
+  left: 50%;
+  top: 10%;
+  -webkit-transform: translate(-50%, -10%);
+          transform: translate(-50%, -10%);
+}
+
+.game__btnNewGame-icon {
+  fill: #ed4c4c;
+  width: 4rem;
+  height: 4rem;
+  margin-right: 1.2rem;
+}
+
+@media only screen and (max-width: 1000px) {
+  .game__btnNewGame-icon {
+    width: 3rem;
+    height: 3rem;
+  }
+}
+
+.game__imgDice {
+  position: absolute;
+  left: 50%;
+  top: 40%;
+  -webkit-transform: translate(-50%, -40%);
+          transform: translate(-50%, -40%);
+  z-index: 10;
+  width: 12rem;
+  -webkit-box-shadow: 5px 5px 14px 0px rgba(0, 0, 0, 0.15);
+  box-shadow: 5px 5px 14px 0px rgba(0, 0, 0, 0.15);
+}
+
+.game__btnRollDice {
+  position: absolute;
+  left: 50%;
+  top: 70%;
+  -webkit-transform: translate(-50%, -70%);
+          transform: translate(-50%, -70%);
+}
+
+.game__btnRollDice-icon {
+  fill: #ed4c4c;
+  width: 4rem;
+  height: 4rem;
+  margin-right: 1.2rem;
+}
+
+@media only screen and (max-width: 1000px) {
+  .game__btnRollDice-icon {
+    width: 3rem;
+    height: 3rem;
+  }
+}
+
+.game__btnHold {
+  position: absolute;
+  left: 50%;
+  top: 80%;
+  -webkit-transform: translate(-50%, -80%);
+          transform: translate(-50%, -80%);
+}
+
+@media only screen and (max-width: 1000px) {
+  .game__btnHold {
+    top: 78%;
+    -webkit-transform: translate(-50%, -78%);
+            transform: translate(-50%, -78%);
+  }
+}
+
+.game__btnHold-icon {
+  fill: #ed4c4c;
+  width: 4rem;
+  height: 4rem;
+  margin-right: 1.2rem;
+}
+
+@media only screen and (max-width: 1000px) {
+  .game__btnHold-icon {
+    width: 3rem;
+    height: 3rem;
+  }
+}
+
+.player {
+  position: relative;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: minmax(min-content, 1fr) minmax(min-content, 1fr);
+      grid-template-columns: minmax(-webkit-min-content, 1fr) minmax(-webkit-min-content, 1fr);
+      grid-template-columns: minmax(min-content, 1fr) minmax(min-content, 1fr);
+  width: 100%;
+  height: 100%;
+  text-align: center;
+}
+
+.playerAll {
+  display: -ms-grid;
+  display: grid;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #f0f0f0;
+}
+
+.playerAll__heading {
+  -ms-grid-row: 1;
+  grid-row: 1/1;
+  font-size: 6rem;
+  text-transform: uppercase;
+  font-weight: 300;
+  color: #747474;
+}
+
+@media only screen and (max-width: 1000px) {
+  .playerAll__heading {
+    font-size: 4rem;
+  }
+}
+
+@media only screen and (max-width: 660px) {
+  .playerAll__heading {
+    font-size: 2.8rem;
+  }
+}
+
+.playerAll__score {
+  -ms-grid-row: 2;
+  -ms-grid-row-span: 1;
+  grid-row: 2/3;
+  font-size: 13rem;
+  font-weight: 200;
+  color: #ed4c4c;
+}
+
+@media only screen and (max-width: 660px) {
+  .playerAll__score {
+    font-size: 10rem;
+  }
+}
+
+.playerAll__currentScore {
+  -ms-grid-row: 3;
+  -ms-grid-row-span: 1;
+  grid-row: 3/4;
+  justify-self: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 20rem;
+  height: 15rem;
+  background-color: #ed4c4c;
+}
+
+@media only screen and (max-width: 660px) {
+  .playerAll__currentScore {
+    width: 15rem;
+    height: 10rem;
+  }
+}
+
+.playerAll__currentScore-heading {
+  font-size: 2rem;
+  font-weight: 300;
+  text-transform: uppercase;
+  color: #383838;
+  margin-bottom: 1rem;
+}
+
+@media only screen and (max-width: 660px) {
+  .playerAll__currentScore-heading {
+    font-size: 1.6rem;
+    margin-bottom: 1rem;
+  }
+}
+
+.playerAll__currentScore-score {
+  font-size: 5rem;
+  font-weight: 300;
+  color: #fff;
+}
+
+@media only screen and (max-width: 660px) {
+  .playerAll__currentScore-score {
+    font-size: 3rem;
+  }
+}
+
+.player2 {
+  background-color: #fff;
+}
+
+.btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border: none;
+  width: 20rem;
+  height: 5rem;
+  justify-self: center;
+  -ms-flex-item-align: center;
+      align-self: center;
+  font-size: 2.4rem;
+  font-weight: 200;
+  text-transform: uppercase;
+  color: #747474;
+  background-color: transparent;
+  z-index: 10;
+}
+
+@media only screen and (max-width: 660px) {
+  .btn {
+    font-size: 1.8rem;
+  }
 }

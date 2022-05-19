@@ -6,7 +6,68 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="src/css/main.css" />
     <script defer type="module" src="src/js/controller.js"></script>
-    <title>Document</title>
+    <title>Game of Dice</title>
   </head>
-  <body></body>
+  <body>
+    <div class="container">
+      <div class="game">
+
+        <!-- Btn new game -->
+        <button type="button" class="btn game__btnNewGame">
+          <svg class="game__btnNewGame-icon">
+            <use
+              xlink:href="src/img/svg/sprite.svg#icon-plus"   
+            ></use>
+          </svg>
+          New game
+        </button type="button">
+
+        <!-- Img dice -->
+        <img src="src/img/dice-1.png" alt="Image d'un dés" class="game__imgDice" />
+
+        <!-- Btn roll dice -->
+        <button type="button" class="btn game__btnRollDice">
+          <svg class="game__btnRollDice-icon">
+            <use
+              xlink:href="src/img/svg/sprite.svg#icon-refresh"  
+            ></use>
+          </svg>
+          Roll dice
+        </button type="button">
+
+        <!-- Btn hold -->
+        <button type="button" class="btn game__btnHold">
+          <svg class="game__btnHold-icon">
+            <use
+              xlink:href="src/img/svg/sprite.svg#icon-location"
+            ></use>
+          </svg>
+          Hold
+        </button type="button">
+
+        <div class="player">
+          <!-- Player 1 -->
+          <div class="playerAll player1">
+            <h2 class="playerAll__heading player1__heading">Player 1</h2>
+            <span class="playerAll__score player1__score">43</span>
+            <div class="playerAll__currentScore player1__currentScore">
+              <h5 class="playerAll__currentScore-heading player1__currentScore-heading">Current</h5>
+              <span class="playerAll__currentScore-score player1__currentScore-score">11</span>
+            </div>
+          </div>
+
+          <!-- Player 2 -->
+          <div class="playerAll player2">
+            <h2 class="playerAll__heading player2__heading">Player 2</h2>
+            <span class="playerAll__score player2__score">72</span>
+            <div class="playerAll__currentScore player2__currentScore">
+              <h5 class="playerAll__currentScore-heading player2__currentScore-heading">Current</h5>
+              <span class="playerAll__currentScore-score player2__currentScore-score">0</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </body>
 </html>

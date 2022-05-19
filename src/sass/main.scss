@@ -2,3 +2,11 @@
 @import 'abstracts/variables';
 
 @import 'base/base';
+@import 'base/animations';
+@import 'base/cssWithJs';
+
+@import 'layout/container';
+@import 'layout/game';
+@import 'layout/player';
+
+@import 'components/btn';
