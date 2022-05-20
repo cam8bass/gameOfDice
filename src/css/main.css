@@ -104,9 +104,10 @@ body {
   box-shadow: 5px 5px 14px 0px rgba(0, 0, 0, 0.15);
 }
 
-@media only screen and (max-width: 500px) {
+@media only screen and (max-width: 660px) {
   .game {
-    height: 70rem;
+    height: 100%;
+    width: 100%;
   }
 }
 
