@@ -1,21 +1,24 @@
 import View from './view.js';
+import diceSprite from '../../img/diceSprite.svg';
+
 class RollDiceView extends View {
-  _parentElement = document.querySelector('.game');
-  _imgDice = document.querySelector('.game__imgDice');
+  _parentElement = document.querySelector('.game__img');
+  _btnRollDice = document.querySelector('.game');
 
   addHandlerUpdateImgDice(handler) {
-    this._parentElement.addEventListener('click', function (e) {
+    this._btnRollDice.addEventListener('click', function (e) {
       const btn = e.target.closest('.game__btnRollDice');
       if (!btn) return;
-
       handler();
     });
   }
 
-  _generateMarkup(result) {
-    console.log(result);
+  _generateMarkup(data) {
+    this._parentElement.innerHTML = '';
     return `
-    <img src="src/img/dice-${result}.png" alt="Image d'un dés" class="game__imgDice" />
+    <svg class="game__imgDice">
+    <use xlink:href="${diceSprite}#dice-${data}"></use>
+    </svg> 
     `;
   }
 }

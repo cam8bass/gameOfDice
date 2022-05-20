@@ -9,8 +9,6 @@ const controleRollDice = function () {
   rollDiceView.render(randomDice);
 };
 
-controleRollDice();
-
 const init = function () {
   rollDiceView.addHandlerUpdateImgDice(controleRollDice);
 };

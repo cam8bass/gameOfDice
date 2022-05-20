@@ -141,6 +141,7 @@ body {
           transform: translate(-50%, -40%);
   z-index: 10;
   width: 12rem;
+  height: 12rem;
   -webkit-box-shadow: 5px 5px 14px 0px rgba(0, 0, 0, 0.15);
   box-shadow: 5px 5px 14px 0px rgba(0, 0, 0, 0.15);
 }
