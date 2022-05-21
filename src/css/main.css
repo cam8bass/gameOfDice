@@ -42,39 +42,12 @@ body {
   font-family: "Lato", sans-serif;
 }
 
-@-webkit-keyframes rotate {
-  0% {
-    -webkit-transform: rotate(0);
-            transform: rotate(0);
-  }
-  100% {
-    -webkit-transform: rotate(360deg);
-            transform: rotate(360deg);
-  }
-}
-
-@keyframes rotate {
-  0% {
-    -webkit-transform: rotate(0);
-            transform: rotate(0);
-  }
-  100% {
-    -webkit-transform: rotate(360deg);
-            transform: rotate(360deg);
-  }
-}
-
-.rotation {
-  -webkit-animation: rotate 1s linear;
-          animation: rotate 1s linear;
-}
-
-.opacity {
-  opacity: 0;
-}
-
 .hidden {
   display: none;
+}
+
+.activePlayer {
+  background-color: #f0f0f0;
 }
 
 .container {
@@ -210,6 +183,16 @@ body {
   text-align: center;
 }
 
+.player--0 {
+  -webkit-transition: all 0.75s;
+  transition: all 0.75s;
+}
+
+.player--1 {
+  -webkit-transition: all 0.75s;
+  transition: all 0.75s;
+}
+
 .playerAll {
   display: -ms-grid;
   display: grid;
@@ -219,7 +202,6 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  background-color: #f0f0f0;
 }
 
 .playerAll__heading {
@@ -313,10 +295,6 @@ body {
   .playerAll__currentScore-score {
     font-size: 3rem;
   }
-}
-
-.player2 {
-  background-color: #fff;
 }
 
 .btn {
