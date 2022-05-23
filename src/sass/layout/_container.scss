@@ -1,5 +1,7 @@
 .container {
-@include flexCenter;
+  position: relative;
+  z-index: 0;
+  @include flexCenter;
   width: 100%;
   height: 100vh;
   background-image: linear-gradient(
@@ -8,5 +10,4 @@
     rgba(139, 86, 60, 0.8)
   );
   backdrop-filter: blur(10px);
- 
 }

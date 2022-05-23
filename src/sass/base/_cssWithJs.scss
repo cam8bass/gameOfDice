@@ -1,11 +1,28 @@
-.rotation {
-  animation: rotate 1s linear;
-}
-
-.opacity {
-  opacity: 0;
-}
-
 .hidden {
   display: none;
+}
+
+.activePlayer {
+  background-color: $color-tertiary-light;
+}
+
+.overlay {
+  position: absolute;
+  z-index: 200;
+  background-color: rgba($color-tertiary-dark, 0.9);
+  width: 100%;
+  height: 100%;
+}
+
+.active {
+  &::after {
+    content: '';
+    display: inline-block;
+    border-radius: 50%;
+    width: 1.6rem;
+    height: 1.6rem;
+    margin-left: 2.8rem;
+    background-color: $color-secondary;
+    @include boxShadow;
+  }
 }
