@@ -4,11 +4,12 @@ export const dataGame = {
   activePlayer: 0,
   randomDice: 0,
   winnerName: '',
+  playing: true,
 };
 
-const switchPLayer = function () {
-  dataGame.currentScore = -1;
+export const switchPLayer = function () {
   dataGame.activePlayer = dataGame.activePlayer === 0 ? 1 : 0;
+  dataGame.currentScore = 0;
 };
 
 export const loadRollDice = function () {
@@ -17,5 +18,21 @@ export const loadRollDice = function () {
   dataGame.randomDice = numberRandom;
   // Switch player and add current score
   if (numberRandom === 1) switchPLayer();
-  dataGame.currentScore += numberRandom;
+  else dataGame.currentScore += numberRandom;
+};
+
+export const loadHoldScore = function () {
+  dataGame.score[dataGame.activePlayer] += dataGame.currentScore;
+
+  if (dataGame.score[dataGame.activePlayer] >= 100) {
+    dataGame.playing = false;
+    dataGame.winnerName = `player ${dataGame.activePlayer + 1}`;
+  } else switchPLayer();
+};
+
+export const loadNewGame = function () {
+  switchPLayer();
+  dataGame.currentScore = 0;
+  dataGame.playing = true;
+  dataGame.score = [0, 0];
 };

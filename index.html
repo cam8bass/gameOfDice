@@ -52,7 +52,7 @@
         <div class="player">
           <!-- Player 1 -->
           <div class="playerAll player--0 activePlayer  ">
-            <h2 class="playerAll__heading ">Player 1</h2>
+            <h2 class="playerAll__heading player--0__heading active">Player 1</h2>
             <span class="playerAll__score player--0__score">0</span>
             <div class="playerAll__currentScore player--0__currentScore">
               <h5 class="playerAll__currentScore-heading">Current</h5>
@@ -62,7 +62,7 @@
 
           <!-- Player 2 -->
           <div class="playerAll player--1  ">
-            <h2 class="playerAll__heading">Player 2</h2>
+            <h2 class="playerAll__heading player--1__heading">Player 2</h2>
             <span class="playerAll__score player--1__score">0</span>
             <div class="playerAll__currentScore player--1__currentScore">
               <h5 class="playerAll__currentScore-heading">Current</h5>
@@ -72,6 +72,15 @@
         </div>
 
       </div>
+      
+      <div class="overlay hidden">
+        <div class="message hidden">
+          <button type="button" class="message__btn message__close">&times;</button>
+          <h3 class="message__title"></h3>
+          <img src="src/img/fireWork-1.gif" alt="image animée feu d'artifice" class="message__img">
+        </div>
+      </div>
+
     </div>
   </body>
 </html>

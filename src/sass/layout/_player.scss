@@ -20,6 +20,8 @@
 
     &__heading {
       grid-row: 1/1;
+      align-self: end;
+      @include flexCenter;
       font-size: 6rem;
       text-transform: uppercase;
       font-weight: 300;

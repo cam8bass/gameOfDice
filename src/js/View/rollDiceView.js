@@ -4,9 +4,7 @@ import diceSprite from '../../img/diceSprite.svg';
 class RollDiceView extends View {
   _parentElement = document.querySelector('.game__img');
   _btnRollDice = document.querySelector('.game');
-  _selectPlayer = document.querySelector('.player');
-  _player1 = document.querySelector('.player--0');
-  _player2 = document.querySelector('.player--1');
+  _imgDice = document.querySelector('.game__img');
 
   /**
    *
@@ -26,28 +24,18 @@ class RollDiceView extends View {
    *
    * @param {number} numImg
    * @todo Generate image of dice
-   * @returns Html of svg
+   * @returns Dice svg
    */
-  _generateMarkup(numImg) {
-    this._parentElement.innerHTML = '';
-    return `
+
+  displayImgDice(numImg) {
+    this._imgDice.classList.remove('hidden');
+    const markup = `
     <svg class="game__imgDice">
     <use xlink:href="${diceSprite}#dice-${numImg}"></use>
     </svg> 
     `;
-  }
-
-  /**
-   *
-   * @param {number} currentPlayer
-   * @todo Sets the current player's score to 0 and toggles the display
-   */
-  toggleWindow(currentPlayer) {
-    this._player1.classList.toggle('activePlayer');
-    this._player2.classList.toggle('activePlayer');
-    this._selectPlayer.querySelector(
-      `.player--${currentPlayer}__currentScore-score`
-    ).textContent = 0;
+    this._parentElement.innerHTML = '';
+    this._parentElement.insertAdjacentHTML('afterbegin', markup);
   }
 
   /**
