@@ -38,6 +38,11 @@
     &-icon {
       @include icons;
     }
+    @media only screen and (max-width: 1000px) {
+      top: 55%;
+      transform: translate(-50%, -55%);
+    }
+
     @media only screen and (max-width: 400px) {
       top: 60%;
       transform: translate(-50%, -60%);
@@ -50,12 +55,17 @@
     top: 80%;
     transform: translate(-50%, -80%);
     @media only screen and (max-width: 1000px) {
-      top: 78%;
-      transform: translate(-50%, -78%);
+      top: 62%;
+      transform: translate(-50%, -62%);
+    }
+
+    @media only screen and (max-width: 450px) {
+      top: 60%;
+      transform: translate(-50%, -60%);
     }
     @media only screen and (max-width: 400px) {
-      top: 68%;
-      transform: translate(-50%, -68%);
+      top: 66%;
+      transform: translate(-50%, -66%);
     }
 
     &-icon {

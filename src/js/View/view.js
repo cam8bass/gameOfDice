@@ -1,12 +1,13 @@
 export default class View {
-  _parentElement;
   _player1 = document.querySelector('.player--0');
   _namePlayer1 = document.querySelector('.player--0__heading');
   _namePlayer2 = document.querySelector('.player--1__heading');
   _player2 = document.querySelector('.player--1');
   _selectPlayer = document.querySelector('.player');
-  _playerAll = document.querySelectorAll('.playerAll__currentScore-score');
-
+  _allCurrentScore = document.querySelectorAll(
+    '.playerAll__currentScore-score'
+  );
+  _imgDice = document.querySelector('.game__img');
   /**
    *
    * @param {Number} currentPlayer
@@ -17,6 +18,6 @@ export default class View {
     this._player2.classList.toggle('activePlayer');
     this._namePlayer1.classList.toggle('active');
     this._namePlayer2.classList.toggle('active');
-    this._playerAll.forEach(player => (player.textContent = 0));
+    this._allCurrentScore.forEach(player => (player.textContent = 0));
   }
 }

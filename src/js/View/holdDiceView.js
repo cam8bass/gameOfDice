@@ -1,6 +1,5 @@
 import View from './view.js';
 class HoldDiceView extends View {
-  _parentElement = document.querySelector('.player');
   _btnHold = document.querySelector('.game');
 
   addHandlerHoldDice(handler) {
@@ -18,7 +17,7 @@ class HoldDiceView extends View {
    * @todo Displays total score
    */
   displayTotalScore(activePlayer, score) {
-    this._parentElement.querySelector(
+    this._selectPlayer.querySelector(
       `.player--${activePlayer}__score`
     ).textContent = score;
   }

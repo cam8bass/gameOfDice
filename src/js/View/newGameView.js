@@ -1,10 +1,7 @@
-class NewGameView {
+import View from './view.js';
+class NewGameView extends View {
   _btnNewGame = document.querySelector('.game__btnNewGame');
   _allTotalScore = document.querySelectorAll('.playerAll__score');
-  _allCurrentScore = document.querySelectorAll(
-    '.playerAll__currentScore-score '
-  );
-  _imgDice = document.querySelector('.game__img');
 
   resetWindow() {
     this._allCurrentScore.forEach(score => (score.textContent = 0));

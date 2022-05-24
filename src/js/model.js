@@ -23,7 +23,6 @@ export const loadRollDice = function () {
 
 export const loadHoldScore = function () {
   dataGame.score[dataGame.activePlayer] += dataGame.currentScore;
-
   if (dataGame.score[dataGame.activePlayer] >= 100) {
     dataGame.playing = false;
     dataGame.winnerName = `player ${dataGame.activePlayer + 1}`;
@@ -31,7 +30,6 @@ export const loadHoldScore = function () {
 };
 
 export const loadNewGame = function () {
-  switchPLayer();
   dataGame.currentScore = 0;
   dataGame.playing = true;
   dataGame.score = [0, 0];

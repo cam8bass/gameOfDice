@@ -163,6 +163,14 @@ body {
   }
 }
 
+@media only screen and (max-width: 1000px) {
+  .game__btnRollDice {
+    top: 55%;
+    -webkit-transform: translate(-50%, -55%);
+            transform: translate(-50%, -55%);
+  }
+}
+
 @media only screen and (max-width: 400px) {
   .game__btnRollDice {
     top: 60%;
@@ -181,17 +189,25 @@ body {
 
 @media only screen and (max-width: 1000px) {
   .game__btnHold {
-    top: 78%;
-    -webkit-transform: translate(-50%, -78%);
-            transform: translate(-50%, -78%);
+    top: 62%;
+    -webkit-transform: translate(-50%, -62%);
+            transform: translate(-50%, -62%);
+  }
+}
+
+@media only screen and (max-width: 450px) {
+  .game__btnHold {
+    top: 60%;
+    -webkit-transform: translate(-50%, -60%);
+            transform: translate(-50%, -60%);
   }
 }
 
 @media only screen and (max-width: 400px) {
   .game__btnHold {
-    top: 68%;
-    -webkit-transform: translate(-50%, -68%);
-            transform: translate(-50%, -68%);
+    top: 66%;
+    -webkit-transform: translate(-50%, -66%);
+            transform: translate(-50%, -66%);
   }
 }
 

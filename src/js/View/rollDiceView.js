@@ -2,9 +2,7 @@ import View from './view.js';
 import diceSprite from '../../img/diceSprite.svg';
 
 class RollDiceView extends View {
-  _parentElement = document.querySelector('.game__img');
   _btnRollDice = document.querySelector('.game');
-  _imgDice = document.querySelector('.game__img');
 
   /**
    *
@@ -34,8 +32,8 @@ class RollDiceView extends View {
     <use xlink:href="${diceSprite}#dice-${numImg}"></use>
     </svg> 
     `;
-    this._parentElement.innerHTML = '';
-    this._parentElement.insertAdjacentHTML('afterbegin', markup);
+    this._imgDice.innerHTML = '';
+    this._imgDice.insertAdjacentHTML('afterbegin', markup);
   }
 
   /**
